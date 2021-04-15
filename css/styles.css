@@ -4,14 +4,11 @@
         box-sizing: border-box;
     }
     
-     ::-webkit-scrollbar {
-        display: none;
-    }
-    
     html {
         font-family: 'Roboto', sans-serif;
         scroll-behavior: smooth;
         height: 100%;
+        overflow-x: hidden;
     }
     
     section {
@@ -40,7 +37,7 @@
     }
     
     section:nth-child(4) {
-        background: url(/img/fondo-estrellas.jpg);
+        background-image: url(/img/fondo-estrellas.jpg);
         z-index: -5;
     }
     /* -----------------------------
@@ -95,7 +92,7 @@
     }
     
     nav ul #child1:after {
-        content: "Home";
+        content: "Inicio";
         line-height: 88px;
     }
     
@@ -105,12 +102,12 @@
     }
     
     nav ul #child3:after {
-        content: "Work";
+        content: "Proyectos";
         line-height: 85px;
     }
     
     nav ul #child4:after {
-        content: "Say hi";
+        content: "Contacto";
         line-height: 70px;
     }
     
@@ -631,16 +628,10 @@
         height: 10%;
     }
     
-    #planeta1,
-    #planeta2,
-    #planeta3,
-    #planeta4 {
-        position: absolute;
-        width: 115px;
-        height: 115px;
-    }
-    
     #planeta1 {
+        position: absolute;
+        width: 90px;
+        height: 90px;
         top: 320%;
         left: 10%;
         animation: rotar 15s;
@@ -649,7 +640,11 @@
     }
     
     #planeta2 {
-        top: 350%;
+        position: absolute;
+        z-index: 80;
+        width: 80px;
+        height: 80px;
+        top: 330%;
         left: 75%;
         animation: rotar 12s;
         animation-iteration-count: infinite;
@@ -657,6 +652,10 @@
     }
     
     #planeta3 {
+        filter: blur(0.8px);
+        position: absolute;
+        width: 80px;
+        height: 80px;
         top: 375%;
         left: 50%;
         animation: rotar 10s;
@@ -665,8 +664,37 @@
     }
     
     #planeta4 {
-        top: 390%;
+        position: absolute;
+        z-index: 80;
+        width: 140px;
+        height: 140px;
+        top: 385%;
         left: 20%;
+        animation: rotar 8s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-delay: 5s;
+    }
+    
+    #planeta5 {
+        filter: blur(0.8px);
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 400%;
+        left: 70%;
+        animation: rotar 8s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+        animation-delay: 5s;
+    }
+    
+    #planeta6 {
+        position: absolute;
+        width: 210px;
+        height: 210px;
+        top: 370%;
+        left: 93%;
         animation: rotar 8s;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
