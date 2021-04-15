@@ -244,6 +244,11 @@
         -webkit-text-fill-color: transparent;
     }
     
+    #about .contenedor-texto p {
+        color: white;
+        font-size: 15px;
+    }
+    
     .contenedor-conocimientos {
         color: white;
         width: 100%;
@@ -309,9 +314,9 @@
             height: 25%;
         }
     }
-    /* -----------------------------
+    /*-----------------------------
  --------Seccion proyectos--------
- ----------------------------- */
+ -----------------------------*/
     
     section#proyectos {
         flex-direction: row;
@@ -568,7 +573,7 @@
     #contacto .contenedor-texto {
         /* border: white 1px solid; */
         width: 80%;
-        height: 100%;
+        height: 50%;
     }
     
     #contacto .contenedor-texto h2 {
@@ -599,21 +604,16 @@
         /* border: white 1px solid; */
     }
     
-    .datos article i {
+    .datos article a i {
         display: flex;
         color: white;
         font-size: 80px;
+        transition: all .4s;
     }
     
-    .accion-dedos img {
-        top: 376%;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 0%;
-        width: 40%;
-        z-index: 500;
-        margin-top: 50px;
+    .datos article a i:hover {
+        color: rgb(49, 150, 233);
+        transform: scale(1.25);
     }
     
     #nave1 {
@@ -621,9 +621,14 @@
         width: 10%;
         height: 10%;
         z-index: 1;
-        animation: mover-n 9s;
+        animation: mover-n 18s;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
+    }
+    
+    .imagenes-juego img {
+        width: 10%;
+        height: 10%;
     }
     
     #planeta1,
@@ -631,111 +636,64 @@
     #planeta3,
     #planeta4 {
         position: absolute;
-        width: 4%;
-        height: 8%;
+        width: 115px;
+        height: 115px;
     }
     
     #planeta1 {
         top: 320%;
-        left: 150%;
-        animation: mover-p 20s;
+        left: 10%;
+        animation: rotar 15s;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
     }
     
     #planeta2 {
         top: 350%;
-        left: 175%;
-        animation: mover-p 15s;
+        left: 75%;
+        animation: rotar 12s;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
     }
     
     #planeta3 {
         top: 375%;
-        left: 100%;
-        animation: mover-p 13s;
+        left: 50%;
+        animation: rotar 10s;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
     }
     
     #planeta4 {
         top: 390%;
-        left: 120%;
-        animation: mover-p 10s;
+        left: 20%;
+        animation: rotar 8s;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
-    }
-    
-    #mando {
-        bottom: -1.8%;
-        z-index: 20;
-    }
-    
-    #dedo-derecho {
-        position: absolute;
-        animation: mover-d 0.3s;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-        left: 30%;
-        transform: rotate(3deg);
-        z-index: 20;
-    }
-    
-    #dedo-izquierdo {
-        position: absolute;
-        animation: mover-i 0.3s;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-        left: 30%;
-        transform: rotate(-3deg);
-        z-index: 20;
-    }
-    /* keyframe de dedo isquierdo */
-    
-    @keyframes mover-i {
-        to {
-            transform: rotate(0deg);
-            bottom: -2.0%;
-        }
-    }
-    /* keyframe de dedo derecho */
-    
-    @keyframes mover-d {
-        to {
-            transform: rotate(0deg);
-            bottom: -2.0%;
-        }
+        animation-delay: 5s;
     }
     /* keyframe de nave */
     
     @keyframes mover-n {
         0% {
-            left: -10%;
-            top: 320%;
-        }
-        25% {
-            top: 350%;
-            left: 25%;
+            left: -50%;
+            top: 330%;
         }
         50% {
-            top: 320%;
-            left: 50%;
-        }
-        75% {
             top: 370%;
-            left: 75%;
+            left: 300%;
         }
         100% {
-            top: 350%;
-            left: 100%;
+            transform: rotateY(180deg);
+            top: 390%;
+            left: -50%;
         }
     }
     /* keyframe de planetas */
     
-    @keyframes mover-p {
+    @keyframes rotar {
         to {
-            left: -10%;
+            transform: rotate(360deg)
         }
     }
     
