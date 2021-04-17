@@ -652,7 +652,6 @@
     }
     
     #planeta3 {
-        filter: blur(0.8px);
         position: absolute;
         width: 80px;
         height: 80px;
@@ -677,7 +676,6 @@
     }
     
     #planeta5 {
-        filter: blur(0.8px);
         position: absolute;
         width: 50px;
         height: 50px;
