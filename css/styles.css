@@ -584,6 +584,7 @@
         text-align: center;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        z-index: 50;
     }
     
     .datos {
@@ -620,10 +621,13 @@
         position: absolute;
         width: 7rem;
         height: 4rem;
+        left: -10rem;
+        top: 135rem;
         z-index: 1;
-        animation: mover-n 18s;
+        /* animation: mover-n 18s;
         animation-iteration-count: infinite;
-        animation-timing-function: linear;
+        animation-timing-function: linear; */
+        animation: none;
     }
     
     .imagenes-juego img {
@@ -636,7 +640,7 @@
         width: 5rem;
         height: 5rem;
         top: 130rem;
-        left: 5rem;
+        left: 25%;
         animation: rotar 15s;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
@@ -648,7 +652,7 @@
         width: 80px;
         height: 80px;
         top: 125rem;
-        right: 6rem;
+        right: 10%;
         animation: rotar 12s;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
@@ -659,7 +663,7 @@
         width: 6rem;
         height: 6rem;
         top: 143rem;
-        right: 24rem;
+        right: 45%;
         animation: rotar 10s;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
@@ -671,7 +675,7 @@
         width: 140px;
         height: 140px;
         top: 150rem;
-        left: 10rem;
+        left: 15%;
         animation: rotar 8s;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
@@ -683,7 +687,7 @@
         width: 50px;
         height: 50px;
         top: 150rem;
-        right: 10rem;
+        right: 25%;
         animation: rotar 8s;
         animation-iteration-count: infinite;
         animation-timing-function: linear;
@@ -692,8 +696,8 @@
     
     #planeta6 {
         position: absolute;
-        width: 210px;
-        height: 210px;
+        width: 12rem;
+        height: 12rem;
         top: 145rem;
         right: -8rem;
         animation: rotar 8s;
@@ -704,10 +708,6 @@
     /* keyframe de nave */
     
     @keyframes mover-n {
-        0% {
-            left: -10rem;
-            top: 135rem;
-        }
         50% {
             top: 140rem;
             left: 200rem;
@@ -715,6 +715,12 @@
         100% {
             transform: rotateY(180deg);
             top: 150rem;
+            left: -10rem;
+        }
+    }
+    
+    @keyframes no-mover {
+        100% {
             left: -10rem;
         }
     }
@@ -726,7 +732,7 @@
         }
     }
     
-    @media only screen and(max-width:1000px) {
+    @media screen and(max-width:1000px) {
         section {
             flex-direction: column-reverse;
             justify-content: center;
@@ -742,12 +748,9 @@
             width: 0%;
             height: 0%;
         }
-        #planeta3 {
-            bottom: -400%;
-        }
     }
     
-    @media only screen and (max-widht:600px) {
+    @media screen and (max-widht:600px) {
         section>img {
             height: 25%;
         }
