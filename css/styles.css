@@ -40,6 +40,7 @@
     }
     
     section:nth-child(4) {
+        /* background-color: black; */
         background-image: url(https://i.imgur.com/sDPNI3n.jpg);
         z-index: 1;
     }
@@ -541,6 +542,9 @@
             color: white;
             font-size: 15px;
         }
+        .btn {
+            margin: 20px 20%;
+        }
     }
     
     @keyframes cambio {
@@ -594,7 +598,7 @@
         z-index: 200;
         width: 50%;
         height: 50%;
-        /* border: white 1px solid; */
+        border: white 1px solid;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -753,8 +757,15 @@
         }
     }
     
-    @media screen and (max-widht:600px) {
+    @media (max-width:600px) {
         section>img {
             height: 25%;
+        }
+        .datos {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 20px;
+            grid-row-gap: 20px;
+            grid-template-columns: 1fr 1fr;
         }
     }
