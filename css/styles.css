@@ -316,9 +316,7 @@
             text-align: center;
             font-size: 12px;
         }
-        html {
-            scroll-snap-type: none;
-        }
+       
     }
     /*-----------------------------
  --------Seccion proyectos--------
