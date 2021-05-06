@@ -9,7 +9,6 @@
         scroll-behavior: smooth;
         height: 100%;
         overflow-x: hidden;
-        
     }
     
     section {
@@ -19,7 +18,6 @@
         padding: 0 40px;
         align-items: center;
         flex-direction: row;
-
     }
     
     .contenedor-texto {
@@ -316,7 +314,6 @@
             text-align: center;
             font-size: 12px;
         }
-       
     }
     /*-----------------------------
  --------Seccion proyectos--------
