@@ -9,7 +9,6 @@
         scroll-behavior: smooth;
         height: 100%;
         overflow-x: hidden;
-        scroll-snap-type: y mandatory;
     }
     
     section {
@@ -19,8 +18,6 @@
         padding: 0 40px;
         align-items: center;
         flex-direction: row;
-        scroll-snap-align: center;
-        scroll-snap-stop: always;
     }
     
     .contenedor-texto {
@@ -316,9 +313,6 @@
         #about .contenedor-texto p {
             text-align: center;
             font-size: 12px;
-        }
-        html {
-            scroll-snap-type: none;
         }
     }
     /*-----------------------------
